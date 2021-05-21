@@ -1,3 +1,177 @@
-body.home {
+/* 
+
+Color-scheme: 
+
+    #eeebdd
+    #ce1212
+    #810000
+    #1b1717
+
+*/
+
+
+
+/* 
+
+Homepage.html
+
+*/
+
+body {
     background-color: #eeebdd;
+}
+
+.site-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.title-area {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-title {
+    font-family: "Sofia";
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    font-family: 'La Belle Aurore', cursive;
+}
+
+.small-star {
+    font-size: 0.5rem;
+}
+
+.hashtag-container {
+    width: auto;
+    max-width: max-content;
+    position: relative;
+    bottom: 45px;
+    left: 105px;
+}
+
+.hashtag {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.0rem;
+}
+
+#menu-primary {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+
+Second <header> section
+
+*/
+
+nav {
+    /* "display: flex" makes it easier to align child items vertically and horizontally -> Uses rows and columns */
+    display: flex;
+    /* Aligns child items so that they will have space before, between, and after each other */
+    justify-content: space-around;
+    /* align-items: Specifies the default alignment for child items within parent container */
+    align-items: center;
+    /* CSS Units (Length Units): Types of values that express a length */
+    /* Relative length units specify a length relative to another length property -> Better to use between different rendering medium */
+    /* CSS Length: A numerical value followed by a length unit */
+    /* Viewport Units: vh, vw: Relative to 1% of the height/width of the viewport */
+    /* Viewport = The browser window size */
+    min-height: 8vh;
+}
+
+/* 
+
+
+Utility Classes Styling
+
+
+*/
+
+.block {
+    display: block;
+}
+
+.center-element-h {
+    margin: auto;
+    width: 50%;
+}
+
+.center-element-inline-v-parent {
+    display: table;
+    margin: 0;
+}
+
+.center-element-inline-v-child {
+    display: table-cell;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.center-element-inline-h {
+    text-align: center;
+}
+
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.center-flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-element-block {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.align-top {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.align-right {
+    float: right;
+}
+
+.align-left {
+    float: left;
+}
+
+/* 
+
+
+Media Query Definitions
+
+
+*/
+
+@supports (font-variation-settings: "wght" 450) {
+    * {
+        font-family: 'Markazi Text';
+        font-weight: 450;
+    }
+}
+
+/* 
+
+
+Debugging
+
+
+*/
+
+.debug {
+    border: 1px red solid;
 }
